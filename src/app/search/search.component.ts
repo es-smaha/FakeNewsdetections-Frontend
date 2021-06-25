@@ -53,7 +53,7 @@ export class SearchComponent implements OnInit {
       response => {
         this.contentSources= response.hits.hits;
         console.log(response);
-        console.error("mia");
+     
 
       }, error => {
         console.error(error);

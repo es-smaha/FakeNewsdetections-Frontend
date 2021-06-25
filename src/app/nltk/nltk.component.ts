@@ -13,6 +13,7 @@ import { Text, Opera } from 'src/app/types';
 const createFake = gql`
 mutation createFake (
   $content : String!,
+  $opr: String!,
  
 ){
   createFake(
@@ -21,6 +22,7 @@ mutation createFake (
     opera{
       content
       result
+      opr
     }
   }
 }`;
@@ -41,6 +43,7 @@ export class NltkComponent implements OnInit {
   k:any;
   myOpera:any = {
     content:'',
+    op:''
    
 
   }
@@ -61,6 +64,7 @@ export class NltkComponent implements OnInit {
           variables:{
            
               content : this.myOpera.content ,
+               op:'0'  //indique le choix soit du sentiment et du fake news 
              
             },
         }).subscribe(
@@ -87,5 +91,37 @@ export class NltkComponent implements OnInit {
         )
          
       }
+
+    public sentiment(){
+          this.apollo.mutate({
+            mutation : createFake,
+            variables:{
+            content : this.myOpera.content ,
+            op:'1'               
+              },
+          }).subscribe(
+          ({data}) =>
+            {
+              this.res=data
+              this.result = this.res['createFake']['opera']['result']
+  
+              if (this.result==0) 
+              {
+                 this.output="positive"
+              }
+  
+              if (this.result != 0) {
+                this.output="negative"
+                
+                } 
+                
+              console.log(this.result)
+            }, (error) => {
+              console.log('Error : ' , error)
+            }
+  
+          )
+           
+        }
   
 }

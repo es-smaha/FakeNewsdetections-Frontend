@@ -30,10 +30,18 @@
         
         
         <div class="submit">
-          <button type="submit"  type="submit" (click)='saveText()'  value="SEND" id="button-blue"> Detection   </button>
+          <button type="submit"  type="submit" (click)='saveText()'  value="SEND" id="button-blue"> Detection fake  </button>
+         
           <div class="ease"></div>
         </div>
   
+        <div class="submit">
+          <button type="submit"  type="submit" (click)='sentiment()'  value="SEND" id="button-blue"> Detection Sentiment  </button>
+         
+          <div class="ease"></div>
+        </div>
+
+        
         <div class="alert alert-primary" role="alert">
           <h4 class="alert-heading">{{output}}</h4>
           
