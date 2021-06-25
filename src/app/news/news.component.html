@@ -1,0 +1,42 @@
+ <!-- <br>
+<div class="container">
+<div *ngFor = "let t of allN | paginate: { itemsPerPage: 5, currentPage: page , totalItems:totalLength } ">
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <img class="card-img-top"  src="O:\news-fake.JPG" >
+        <div class="card-body">
+          <h5 class="card-title">{{t.title}}</h5>
+          <p class="card-text">{{t.content}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <br>
+  
+</div>
+<pagination-controls (pageChange)="page = $event" ></pagination-controls>
+</div>  -->
+<br>
+
+<br>
+<div class="container">
+  <app-search></app-search>
+  <h3 class="col-md-12 text-center">Elasticsearch server status: {{status}}</h3>
+  <br>
+<div class="card-deck">
+  <div class="card"  *ngFor = "let t of allN | paginate: { itemsPerPage: 6, currentPage: page , totalItems:totalLength }">
+    <img src="https://ds1.static.rtbf.be/article/image/1920xAuto/0/1/5/200c07cf771d7d27141b85ddaa829968-1584361739.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{t.title}}</h5>
+      <p class="card-text">{{t.content}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+ 
+</div>
+<br>
+<pagination-controls (pageChange)="page = $event" ></pagination-controls>
+</div>

@@ -1,0 +1,118 @@
+<!-- <div *ngFor = "let t of allT ">
+
+       <p>{{t.id}}</p> 
+       <p>{{t.title}}</p> 
+       <p>{{t.content}}</p> 
+
+
+ </div> -->
+
+<!--  
+<div class="container">
+  
+       <div class="row">
+         <div class="col">
+           <input type="text" class="form-control" [(ngModel)]=" myOpera.text" placeholder="First name">
+         </div>
+         <div class="col">
+           <input type="text" class="form-control"  [(ngModel)]=" myOpera.operationType"  placeholder="Last name">
+         </div>
+       </div>
+    
+     <br>
+     <button type="submit"  (click)='saveText()' class="btn btn-primary btn-sm" >Small button</button>
+
+     {{k}}
+
+</div> --> 
+<!-- 
+<div class="container">
+
+ 
+   <br>
+   <br>
+   
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Enter votre Texte</label>
+        
+        <textarea class="form-control"   [(ngModel)]=" myOpera.text" id="inputCity" rows="3"></textarea>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Choisir le Natural language Processing / NLP</label>
+         <select id="inputState" [(ngModel)]=" myOpera.operationType" class="form-control">
+          <option  value="Tokenization"> Tokenization</option>
+          <option value="Lemmatization">Lemmatization </option>
+          <option  value="StopWords"> StopWords</option>
+          <option value="Stemming">Stemming </option>
+          <option  value="BagOfWordsEn"> BagOfWordsEn</option>
+          <option value="PosTagging">PosTagging </option>
+          <option value="TFIDF">TFIDF</option>
+          
+        </select> 
+      </div>
+    
+    </div>
+   
+    <button type="submit" (click)='saveText()' class="btn btn-primary">Test Nlp</button>
+    <br>
+    <br>
+    <p class="h1">{{result}}</p>
+  
+</div> -->
+<div class="form-row">
+
+<div class="form-group col-md-6">
+<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1">
+      
+      <p class="text">
+        <textarea name="text"    [(ngModel)]=" myOpera.text" id="inputCity" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <button type="submit"  type="submit" (click)='saveText()'  value="SEND" id="button-blue"> NLP </button>
+        <div class="ease"></div>
+      </div>
+
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"> {{result}}</textarea>
+      </p>
+    </form>
+   <br>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+  <div class="form-group col-md-6">
+    <div id="form-main">
+      <div id="form-div">
+        <label for="inputState">Choisir le Natural language Processing / NLP</label>
+        <select id="inputState" [(ngModel)]=" myOpera.operationType" class="form-control">
+         <option  value="Tokenization"> Tokenization</option>
+         <option value="Lemmatization">Lemmatization </option>
+         <option  value="StopWords"> StopWords</option>
+         <option value="Stemming">Stemming </option>
+         <option  value="BagOfWordsEn"> BagOfWordsEn</option>
+         <option value="PosTagging">PosTagging </option>
+         <option value="TFIDF">TFIDF</option>
+         
+       </select> 
+       <br>
+      </div>
+    </div>
+      </div>
+
+
+
+
+
+  </div>
+  <br>
+

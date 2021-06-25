@@ -1,0 +1,55 @@
+<!-- 
+<div class="container">
+    <br>
+    <br>
+    
+     <div class="form-row">
+       <div class="form-group col-md-6">
+         <label for="inputCity">Enter Your Text</label>
+         <textarea class="form-control"  [(ngModel)]=" myOpera.content" id="inputCity" rows="3"></textarea>
+       </div>
+
+     </div>
+    
+     <button type="submit" (click)='saveText()' class="btn btn-primary">Test</button>
+     <br>
+     <br>
+     <p class="h1">{{output}}</p>
+ 
+ 
+ </div> -->
+
+
+  <div id="form-main">
+    <div id="form-div">
+      <form class="form" id="form1">
+        
+        <p class="text">
+          <textarea name="text"  [(ngModel)]=" myOpera.content"  id="inputCity" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+        </p>
+        
+        
+        <div class="submit">
+          <button type="submit"  type="submit" (click)='saveText()'  value="SEND" id="button-blue"> Detection   </button>
+          <div class="ease"></div>
+        </div>
+  
+        <div class="alert alert-primary" role="alert">
+          <h4 class="alert-heading">{{output}}</h4>
+          
+          <hr>
+       
+        </div>
+      </form>
+     <br>
+    </div>
+  </div>
+
+  
+  
+  
+  
+
+    <br>
+  
+ 
